@@ -3,12 +3,18 @@
 int size = 25;
 char board[25][25];
 void moveSnake(snake s);
+int gameNotOver = 1;
 
 int main(){
   initialiseBoard();
 
   snake sMan = make_snake();
-  printBoard();
+
+  while(gameNotOver){
+    printBoard();
+    sleep(1);
+    moveSnake(sMan);
+  }
   return 0;
 }
 
