@@ -21,9 +21,9 @@ snake make_snake(){
   s.direction = 0;
   s.xPos = size/2;
   s.yPos = size/2;
-  node* tail = new_node(size/2-2,size/2, NULL);
-  node* middle = new_node(size/2-1,size/2, tail);
-  node* head = new_node(size/2,size/2, middle);
+  node* head = new_node(size/2-2,size/2, NULL);
+  node* middle = new_node(size/2-1,size/2, head);
+  node* tail = new_node(size/2,size/2, middle);
   s.head = head;
   s.tail = tail;
   return s;

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <windows.h>
 // Defining Data Stuctures
 typedef struct node {
   struct node* next;
@@ -18,7 +19,8 @@ typedef struct {
 } snake;
 
 //
-void moveSnake(snake s);
+void moveSnake(snake* s);
+void moveNode(snake* s, int x, int y);
 
 // Initalise and print board
 void initialiseBoard();
